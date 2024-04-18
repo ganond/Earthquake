@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
     },
     
     Mensaj: {
-        fontSize: 18, // Tamaño de fuente ajustado para móviles
-        textAlign: 'center', // Alineación centrada para mayor legibilidad
-        marginHorizontal: 20, // Margen horizontal para evitar que el texto esté demasiado pegado a los bordes
-        marginTop: 20, // Espacio superior para separar el texto de otros elementos
-        color: 'black', // Color del texto
-        fontWeight: 'bold', // Negrita para resaltar el mensaje
+        fontSize: 18, 
+        textAlign: 'center', 
+        marginHorizontal: 20, 
+        marginTop: 20, 
+        color: 'black', 
+        fontWeight: 'bold', 
     }
 })

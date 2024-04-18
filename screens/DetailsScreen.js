@@ -6,10 +6,10 @@ import { Button } from 'react-native-elements';
 const DetailsScreen = ({ route, navigation }) => {
     const { earthquake } = route.params;
   
-    // Depura para verificar si el objeto earthquake se está pasando correctamente
+
     console.log('Earthquake:', earthquake);
   
-    // Verifica si el objeto earthquake existe y tiene las propiedades esperadas
+  
     if (!earthquake || !earthquake.properties || !earthquake.geometry) {
       return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -18,11 +18,11 @@ const DetailsScreen = ({ route, navigation }) => {
       );
     }
   
-    // Verifica la estructura del objeto earthquake y ajusta las propiedades en consecuencia
+ 
     const { properties, geometry } = earthquake;
     const { title, place } = properties;
     const { mag } = properties;
-    const depth = geometry.coordinates[2]; // Verifica si profundidad está en el lugar correcto de la estructura
+    const depth = geometry.coordinates[2]; 
   
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

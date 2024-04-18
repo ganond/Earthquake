@@ -36,7 +36,7 @@ const EarthquakeMapScreen = () => {
 
   const fetchEarthquakes = async () => {
     if (!isValidDate(startDate) || !isValidDate(endDate)) {
-      Alert.alert('Invalid Date', 'Please enter valid dates.');
+      Alert.alert('Fecha Inválida', 'Por favor ingrese una fecha válida.');
       return;
     }
     
@@ -131,18 +131,18 @@ const EarthquakeMapScreen = () => {
             keyExtractor={(item) => item.id}
             ListHeaderComponent={() => (
               <View style={styles.paginationContainer}>
-                <Button title="Previous Page" onPress={() => setPage(page - 1)} disabled={page === 1} />
-                <Button title="Next Page" onPress={() => setPage(page + 1)} />
+                <Button title="Anterior" onPress={() => setPage(page - 1)} disabled={page === 1} />
+                <Button title="Siguiente" onPress={() => setPage(page + 1)} />
               </View>
             )}
             ListFooterComponent={() => (
               <View style={styles.paginationContainer}>
-                <Button title="Previous Page" onPress={() => setPage(page - 1)} disabled={page === 1} />
-                <Button title="Next Page" onPress={() => setPage(page + 1)} />
+                <Button title="Anterior" onPress={() => setPage(page - 1)} disabled={page === 1} />
+                <Button title="Siguiente" onPress={() => setPage(page + 1)} />
               </View>
             )}
           />
-          <Button title="Close" onPress={() => setShowListModal(false)} buttonStyle={styles.closeButton} />
+          <Button title="Cerrar" onPress={() => setShowListModal(false)} buttonStyle={styles.closeButton} />
         </View>
       </Modal>
       {showStartDatePicker && (
